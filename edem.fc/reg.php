@@ -11,8 +11,8 @@ if(!$conn)
 	die("conn error ". mysqli_connect_error());
 	
 } else{
-mysqli_query($conn, "SELECT * FROM `users`");
-$query = "SELECT * FROM `users`";
+mysqli_query($conn, "SELECT * FROM `igroki`");
+$query = "SELECT * FROM `igroki`";
 
 $result = mysqli_query($conn, $query);
 
@@ -21,21 +21,12 @@ $username_exists = false;
 $info_is_valid = true;
 
 while ($row = mysqli_fetch_assoc($result)){
-	if ($row['username'] == $_POST['username'] |
-        $row['email'] == $_POST['email']
+	if ($row['username'] == $_POST['username'] 
+        
 ) {
 		$username_exists = true;
 	}
-	if ($_POST['email'] != NULL && 
-        preg_match("![0-9a-z-]+@[a-z]+[.][a-z]!", $_POST["email"]) &&
-        $username_exists == false)
-        {
-        	echo "Почта принята<br>";
-        }
-		else {
-		echo "Проверьте правильность ввода<br>";
-		$info_is_valid = false;
-	}
+	
 
 	if ($_POST['username'] != NULL &&
 
@@ -63,8 +54,8 @@ if($info_is_valid == true)
 	$pass = $_POST['password'];
 	$email = $_POST['email'];
 
-	$query1 = "INSERT INTO `users`(`username`, `password`, `email`) 
-			  VALUES ('$username','$pass', '$email')";
+	$query1 = "INSERT INTO `igroki`(`username`, `password`) 
+			  VALUES ('$username','$pass')";
 
 	mysqli_query($conn, $query1);
 

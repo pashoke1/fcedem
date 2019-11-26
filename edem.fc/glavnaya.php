@@ -1,4 +1,6 @@
-<?php session_start(); ?>
+<?php session_start(); 
+
+?>
 <html>
 <head>
 	<title></title>
@@ -9,6 +11,10 @@
 <body id="bodygl">
 	<a href="glavnaya.php"><button id="b1"></button></a>
 <div id="d1">Футбольный клуб "Эдем"</div>
+<?php 
+if (!isset($_SESSION['username'])) {
+	?>
+
 <form action="avt.php" method="post">
 	<div id="avt1">
 		Авторизация
@@ -22,7 +28,26 @@
 		<a href="regform.php" id="ar1">Регистрация</a>
 	</div>
 </form>
-<?php  //require("avt.php"); ?>
+<?php
+
+} else { 
+
+
+	?>
+	<div id="avt1">
+		
+			<?php
+			$foto = $_SESSION["foto"];
+			echo "<img src='$foto'>";
+			echo $_SESSION["username"] . ' ';
+			echo $_SESSION["surname"];
+			echo "<br>";
+			echo $_SESSION["name"];
+		?>
+		<a href="regform.php" id="ar1">Личный кабинет</a>
+		<a href="vihod.php" id="ar1">Vihod</a>
+	</div> <?php
+} ?>
 <div id="sp1">
 <ul id="ul1">
 	<a href="1p.php" id="ast1"><li id="st1">Матчи</li></a>
