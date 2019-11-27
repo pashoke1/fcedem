@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <html>
 <head>
 	<title></title>
@@ -8,19 +9,9 @@
 <body id="bodygl">
 	<a href="glavnaya.php"><button id="b1"></button></a>
 <div id="d1">Футбольный клуб "Эдем"</div>
-<form action="avt.php" method="post">
-	<div id="avt1">
-		Авторизация
-		<br>
-		<input type="text" name="username" placeholder="Логин" id="log1">
-<br>
-		<input type="password" name="password" placeholder="Пароль" id="log1">
-		<br>
-		<input type="submit" name="Вход">
-		<br>
-		<a href="regform.php" id="ar1">Регистрация</a>
-	</div>
-</form>
+<?php 
+require("tablavt.php");
+?>
 <div id="sp1">
 <ul id="ul1">
 	<a href="1p.php" id="ast1"><li id="st1">Матчи</li></a>
