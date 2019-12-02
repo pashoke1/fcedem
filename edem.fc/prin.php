@@ -1,4 +1,3 @@
-<?php session_start(); ?>
 <html>
 <head>
 	<meta charset="utf-8">
@@ -11,20 +10,18 @@ if(!$conn)
 {
 	die("conn error ". mysqli_connect_error());
 } else{
-mysqli_query($conn, "SELECT * FROM `users`");
-$query = "SELECT * FROM `users`";
+mysqli_query($conn, "SELECT * FROM `igroki`");
+$query = "SELECT * FROM `igroki`";
 $result = mysqli_query($conn, $query);
 $username_exists = false;
 $info_is_valid = true;
-$rowname = $row['name_pol'];
-$namepol = $_POST['name_pol'];
-$username = $_POST['username'];
+$username = $_POST['login'];
 $row = mysqli_fetch_assoc($result);
 $prish = $row['username'];
-if ($username != $prish or $namepol != $rowname) {$username_exists = false;}
-	if ($_POST['username'] != NULL &&
-strlen($_POST['username']) >= 4 &&
-preg_match("!^[a-zA-Z][a-zA-Z0-9_]*$!", $_POST["username"]) &&
+if ($username != $prish) {$username_exists = false;}
+	if ($_POST['login'] != NULL &&
+strlen($_POST['login']) >= 4 &&
+preg_match("!^[a-zA-Z][a-zA-Z0-9_]*$!", $_POST["login"]) &&
  	($username_exists == false)) {
 		echo "Логин принят<br>";
 	} else {
@@ -41,8 +38,7 @@ else
 	echo "Проверьте правильноть ввода или такой пользователь уже существует.<br>";
 	$info_is_valid = false;
 }
-if ($_POST['name_pol'] != NULL &&
-preg_match("!^[a-zA-Z][a-zA-Z0-9_]*$!", $_POST["name_pol"]) &&
+if ($_POST['fi'] != NULL &&
  	($username_exists == false)) {
 	} else {
 		echo "Проверьте правильность ввода<br>";
@@ -50,11 +46,11 @@ preg_match("!^[a-zA-Z][a-zA-Z0-9_]*$!", $_POST["name_pol"]) &&
 	}
 if($info_is_valid == true) 
 {
-	$username = $_POST['username'];
+	$username = $_POST['login'];
 	$pass = $_POST['password'];
-	$name_pol = $_POST['name_pol'];
-	$query1 = "INSERT INTO `users`(`username`, `password`, `name_pol`) 
-			  VALUES ('$username','$pass', '$name_pol')";
+	$fi = $_POST['fi'];
+	$query1 = "INSERT INTO `prin`(`Ф.И.`, `password`, `login`) 
+			  VALUES ('$fi','$pass', '$username')";
 	mysqli_query($conn, $query1);
 	echo "Регистрация прошла успешно!";
 	?>

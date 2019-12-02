@@ -21,13 +21,13 @@
 </div>
 <div id="dr1">
 	<h1 id="hr1"> Регистрация </h1>
-		<form method="post" action='reg.php'>
+		<form method="post" action='prin.php'>
 		
 			<br>
 			<p id="regp1">
 			
 			
-			<input type="text" name="username" id="in1" placeholder="Логин">
+			<input type="text" name="login" id="in1" placeholder="Логин">
 		</p>
 			<br>
 			<p id="regp1">
@@ -43,7 +43,7 @@
 		</p>
 			<br>
 			<p id="regp1">
-			<input type="text" name="name_pol" placeholder="Имя пользователя">
+			<input type="text" name="fi" placeholder="Ф.И.">
 			</p>
 			<br>
 

@@ -43,6 +43,8 @@ require("tablavt.php");
   <img src="emblema3.png" id="me1">
   <div id="sch1">2 : 2</div>
   <img src="soperniki/k2.png" id="kv1">
+  <br>
+  <br>
   <div id="goli">Голы:<br>Сергеев А.<br>Евдокимов В.</div>
 </div>
 <div id="Матч№2" class="tabcontent">
@@ -50,6 +52,8 @@ require("tablavt.php");
  <img src="emblema3.png" id="me1">
   <div id="sch1">0 : 6</div>
   <img src="soperniki/k3.png" id="kv1">
+    <br>
+  <br>
   <div id="goli"></div>
   <a id="fotom" href="https://vk.com/album-99452026_267199170">Фотообзор матча<br><img src="foto.png" id="fotomp"></a>
   </div>
@@ -58,6 +62,8 @@ require("tablavt.php");
  <img src="emblema3.png" id="me1">
   <div id="sch1">3 : 13</div>
   <img src="soperniki/k1.png" id="kv1">
+    <br>
+  <br>
   <div id="goli">Голы:<br>Осипов Д.(2)<br>Бух М.</div>
   <a id="fotom" href="https://vk.com/album-99452026_267466156">Фотообзор матча<br><img src="foto.png" id="fotomp"></a>
 </div>
@@ -66,6 +72,8 @@ require("tablavt.php");
  <img src="emblema3.png" id="me1">
   <div id="sch1">1 : 8</div>
   <img src="soperniki/k4.png" id="kv1">
+    <br>
+  <br>
   <div id="goli">Голы:<br>Сергеев А.</div>
 </div>
 <div id="Матч№5" class="tabcontent">
@@ -73,6 +81,8 @@ require("tablavt.php");
  <img src="emblema3.png" id="me1">
   <div id="sch1">4 : 4</div>
   <img src="soperniki/k5.png" id="kv1">
+    <br>
+  <br>
   <div id="goli">Голы:<br>Востриков А.(2)<br>Сергеев М.<br>Матасов И.(аг)</div>
   <a id="fotom" href="https://vk.com/album-99452026_268160223">Фотообзор матча<br><img src="foto.png" id="fotomp"></a>
 </div>
@@ -81,6 +91,8 @@ require("tablavt.php");
  <img src="emblema3.png" id="me1">
   <div id="sch1">3 : 2</div>
   <img src="soperniki/k6.png" id="kv1">
+    <br>
+  <br>
   <div id="goli">Голы:<br>Сергеев М.<br>Бух М.<br>Сергеев А.</div>
 </div>
 <div id="Матч№7" class="tabcontent">
@@ -88,6 +100,8 @@ require("tablavt.php");
  <img src="emblema3.png" id="me1">
   <div id="sch1">3 : 3</div>
   <img src="soperniki/k7.png" id="kv1">
+    <br>
+  <br>
   <div id="goli">Голы:<br>Сергеев М.<br>Сергеев А.(2)</div>
 </div>
 <div id="Матч№8" class="tabcontent">
@@ -95,6 +109,8 @@ require("tablavt.php");
  <img src="emblema3.png" id="me1">
   <div id="sch1">5 : 4</div>
   <img src="soperniki/k8.png" id="kv1">
+    <br>
+  <br>
   <div id="goli">Голы:<br>Сергеев А.(2)<br>Парахин Д.(2)<br>Снеговский П.</div>
 </div>
 <div id="Матч№9" class="tabcontent">
@@ -102,6 +118,8 @@ require("tablavt.php");
  <img src="emblema3.png" id="me1">
   <div id="sch1">3 : 2</div>
   <img src="soperniki/k9.png" id="kv1">
+    <br>
+  <br>
   <div id="goli">Голы:<br>Сергеев М.<br>Бух М.<br>Гудин К.(аг)</div>
 </div>
 <div id="Матч№10" class="tabcontent">
@@ -109,6 +127,8 @@ require("tablavt.php");
  <img src="emblema3.png" id="me1">
   <div id="sch1">0 : 1</div>
   <img src="soperniki/k10.png" id="kv1">
+    <br>
+  <br>
   <div id="goli"></div>
   <div id="videoob">Обзор матча<br><iframe width="400" height="250" src="https://www.youtube.com/embed/9miQ1LvY-uQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
 </div>
@@ -117,6 +137,8 @@ require("tablavt.php");
  <img src="emblema3.png" id="me1">
   <div id="sch1">3 : 2</div>
   <img src="soperniki/k11.png" id="kv1">
+    <br>
+  <br>
   <div id="goli">Голы:<br>Сергеев М.<br>Бух М.<br>Сергеев А.</div>
 </div>
 <script type="text/javascript">

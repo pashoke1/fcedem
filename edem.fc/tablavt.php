@@ -3,7 +3,7 @@ if (!isset($_SESSION['username'])) {
 	?>
 
 <form action="avt.php" method="post">
-	<div id="avt1">
+	<div id="avt2">
 		Авторизация
 		<br>
 		<input type="text" name="username" placeholder="Логин" id="log1">
@@ -27,10 +27,11 @@ if ($_SESSION["igr"] = true) {
 			<?php
 			$foto = $_SESSION["foto"];
 			echo "<img src='$foto'>";
-			echo $_SESSION["name"] . ' ';
-			echo $_SESSION["surname"];
+			echo $_SESSION["surname"] . ' ';
+			echo $_SESSION["name"];
 			echo "<br>";
 			echo $_SESSION["lch"];
+			echo "<br>";
 			echo $_SESSION["vihod"];
 		?>
 		
@@ -38,13 +39,13 @@ if ($_SESSION["igr"] = true) {
 	</div> <?php
 }
 if ($_SESSION["pol"] == true) { ?>
-	<div id="avt1">
+	<div id="avt3">
 		
 			<?php
 			echo $_SESSION["name_pol"];
 		?>
 		<br>
-		<a href="vihod.php" id="ar1">Vihod</a>
+		<a href="vihod.php" id="ar1">Выход</a>
 	</div> <?php
 }
  ?>

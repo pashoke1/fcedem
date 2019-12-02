@@ -8,6 +8,7 @@ if(($row['username'] == $username) &&
 	$_SESSION["username"] = $username;
 	$_SESSION["pol"] = true;
 	$_SESSION["name_pol"] = $row["name_pol"];
+	
 	header('Location: /glavnaya.php');
 
 }elseif (($rowi['username'] == $username) && 
@@ -17,11 +18,10 @@ if(($row['username'] == $username) &&
 	$_SESSION["foto"] = $rowfoto['img'];
 	$_SESSION["username"] = $username;
 	$_SESSION["password"] = $password;
-	$_SESSION["surname"] = $rowi['surname'];
-	$_SESSION["name"] = $rowi['name'];
+	$_SESSION["name"] = $rowi['f.i.'];
 	$_SESSION["igr"] = true;
 	$_SESSION["lch"] = "<a href='regform.php' id='ar1'>Личный кабинет</a>";
-	$_SESSION["vihod"] = "<a href='vihod.php' id='ar1'>Vihod</a>";
+	$_SESSION["vihod"] = "<a href='vihod.php' id='ar1'>Выход</a>";
 	header('Location: /glavnaya.php');
 }else {
 	header('Refresh:2; url = "regform.php"');
