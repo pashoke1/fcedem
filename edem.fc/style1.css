@@ -38,7 +38,7 @@ border-left: 0px;
 	margin-bottom: 0%;
     line-height: 190%;
 	font-size: 20px;
-	font-family: Times new roman;
+	font-family: monospace;
 	background-color: #e6f4f5;
 	
 }
@@ -48,11 +48,11 @@ border-left: 0px;
 	height: 20%;
 	text-align:center;
 	margin-left: 80%;
-	margin-top: -160px;
+	margin-top: -144px;
 	margin-bottom: 0%;
-    line-height: 250%;
+    line-height: 200%;
 	font-size: 20px;
-	font-family: Times new roman;
+	font-family: monospace;
 	background-color: #e6f4f5;
 	
 }
@@ -66,7 +66,21 @@ border-left: 0px;
 	margin-bottom: 0%;
     line-height: 250%;
 	font-size: 200%;
-	font-family: Times new roman;
+	font-family: monospace;
+	background-color: #e6f4f5;
+	
+}
+#avtad {
+	border:3px outset #e6f4f5;
+	width: 274px;
+	height: 20%;
+	text-align:center;
+	margin-left: 80%;
+	margin-top: -144px;
+	margin-bottom: 0%;
+    line-height: 190%;
+	font-size: 130%;
+	font-family: monospace;
 	background-color: #e6f4f5;
 	
 }

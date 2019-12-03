@@ -17,8 +17,32 @@ if (!isset($_SESSION['username'])) {
 </form>
 <?php
 
-} 
-if ($_SESSION["igr"] = true) { 
+}
+if ($_SESSION["admin"] == true) { 
+
+
+	?>
+	<div id="avtad">
+		
+			<?php
+			echo $_SESSION["fotoa"];
+			$foto = $_SESSION["fotoa"];
+			echo "<img src='$foto'>";
+			echo "<br>";
+			echo $_SESSION["name"];
+			echo "<br>";
+			echo $_SESSION["prin"];
+			echo "<br>";
+			echo $_SESSION["lch"];
+			echo "<br>";
+			echo $_SESSION["vihod"];
+			
+		?>
+		
+		
+	</div> <?php
+}
+if ($_SESSION["igr"] == true) { 
 
 
 	?>
@@ -48,4 +72,5 @@ if ($_SESSION["pol"] == true) { ?>
 		<a href="vihod.php" id="ar1">Выход</a>
 	</div> <?php
 }
+
  ?>

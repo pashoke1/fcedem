@@ -1,6 +1,4 @@
-<?php session_start(); 
-
-?>
+<?php session_start();  ?>
 <html>
 <head>
 	<meta charset="utf-8">
@@ -11,23 +9,66 @@
 $conn = mysqli_connect("127.0.0.1","root","","edemfc");
 if(!$conn)
 {
-	die("conn error ". mysqli_connect_error());
+  die("conn error ". mysqli_connect_error());
 } else{
 
 $query = "SELECT * FROM `prin`";
-$result = mysqli_query($conn, $query);
-$row = mysqli_fetch_assoc($result);
-$login = $row['login'];
-$password = $row['password'];
-$rpass = $row['r.password'];
-$fi = $row['Ф.И.'];
-$req = require('podtdannie.php');
-while () {
-	echo $req;
-}
-	
-}
 
+$result_set = $conn->query("SELECT * FROM `prin`");
+
+
+
+
+
+while ($row = $result_set->fetch_assoc()) {
+  print_r($row);
+  
+  ?>
+ 
+<?php
+  echo "<hr />";
+}
 ?>
+<form method="post">
+  <p>ID принять:<input type="int" name="da" style="width: 2%;"></p>
+  <p>ID удалить:<input type="int" name="net" style="width: 2%;"></p>
+  <input type="submit" name="">
+</form>
+<?php
+     }
+
+        if ($_POST['da'] != null) {
+           $idv = $_POST['da'];
+           $result_set1 = $conn->query("SELECT * FROM `prin` WHERE `id` = '$idv'");
+           $row12 = mysqli_fetch_assoc($result_set1);
+           $login1 = $row12['login'];
+           $password1 = $row12['password'];
+           $fi1 = $row12['Ф.И.'];
+                     $query1 = "INSERT INTO `igroki` (`username`, `password`, `f.i.`)
+          VALUES ('$login1', '$password1', '$fi1')";
+
+          mysqli_query($conn, $query1);
+
+          $query3 = "DELETE FROM `prin` WHERE `prin`.`id` = '$idv'";
+
+          $result2 = mysqli_query($conn, $query3);
+
+
+            
+
+           
+       }
+       if ($_POST['net'] != null) {
+           $idn = $_POST['net'];
+           
+        $query2 = "DELETE FROM `prin` WHERE `prin`.`id` = '$idn'";
+        $result2 = mysqli_query($conn, $query2);
+        
+       }
+       ?>
+       <?php
+mysqli_close($conn);
+        die(mysqli_connect_error());
+        ?>
 </body>
 </html>

@@ -12,5 +12,6 @@ $otprf = "SELECT * FROM `foto` WHERE `id` = '$id'";
 $resultfoto = mysqli_query($conn, $otprf);
 $rowfoto = mysqli_fetch_assoc($resultfoto);
 
-
 $igr = false;
+
+
