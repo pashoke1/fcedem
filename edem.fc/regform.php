@@ -20,7 +20,8 @@
 </ul>
 </div>
 <div id="dr1">
-	<h1 id="hr1"> Регистрация </h1>
+	<a href="regformigr.php" id="regigra"><button id="b2">Регисрация для <br> игроков клуба</button></a>
+	<h1 id="hr1"> Регистрация пользователей </h1>
 		<form method="post" action='reg.php'>
 		
 			<br>
@@ -52,6 +53,7 @@
 		
 		<p id="prf1">Если вы уже зарегистрированы. 
 		<a class="ar1" href="glavnaya.php" id="arf1">Выход</a>
+
 	</p>
 </div>
 </div>

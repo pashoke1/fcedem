@@ -1,4 +1,8 @@
-<?php session_start();  ?>
+<?php session_start();  
+if ($_SESSION['admin'] == true) {
+
+
+?>
 <html>
 <head>
 	<meta charset="utf-8">
@@ -72,3 +76,7 @@ mysqli_close($conn);
         ?>
 </body>
 </html>
+<?php
+}else{
+    header('Location: /glavnaya.php');
+}

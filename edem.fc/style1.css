@@ -95,6 +95,18 @@ border-left: 0px;
 	display: inline-block;
 	
 }
+#b2 {
+	border:0px;
+	margin:0%;
+	background: url("emblema3.png") 100% no-repeat / contain;
+	width: 75%;
+	height:20%;
+	text-align: left;
+	display: inline-block;
+		font-size: 150%;
+		font-weight: bold;
+
+}
 #sp1 {
 	background-color:  #bdfffe;
 	height: 100%;
@@ -103,6 +115,7 @@ border-left: 0px;
 	border-right: 3px outset #bdfffe;
 	border-bottom: 3px outset #bdfffe;
 	text-align: right;
+
 }
 #st1 {
 	border:2px outset #5279c7;

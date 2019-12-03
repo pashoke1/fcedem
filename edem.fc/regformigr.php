@@ -20,7 +20,7 @@
 </ul>
 </div>
 <div id="dr1">
-	<h1 id="hr1"> Регистрация </h1>
+	<h1 id="hr1"> Регистрация игроков </h1>
 		<form method="post" action='prin.php'>
 		
 			<br>
