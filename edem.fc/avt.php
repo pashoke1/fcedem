@@ -26,7 +26,7 @@ if (($rowi['username'] == $username) &&
 	$_SESSION["password"] = $password;
 	$_SESSION["name"] = $rowi['f.i.'];
 	$_SESSION["igr"] = true;
-	$_SESSION["lch"] = "<a href='regform.php' id='ar1'>Личный кабинет</a>";
+	$_SESSION["lch"] = "<a href='lchkabinet.php' id='ar1'>Личный кабинет</a>";
 	$_SESSION["vihod"] = "<a href='vihod.php' id='ar1'>Выход</a>";
 	header('Location: /glavnaya.php');
 } else {echo "";}
@@ -36,10 +36,10 @@ if (($rowia['login'] == $username) &&
 	session_start();
 	$_SESSION["fotoa"] = $rowfotoa['img'];
 	$_SESSION["username"] = $username;
-	$_SESSION["name"] = $rowia['Имя фамилия'];
+	$_SESSION['name'] = $rowia['Имя фамилия'];
 	$_SESSION["admin"] = true;
 	$_SESSION['prin'] = "<a href='admprin.php' id='ar1'>Подтверждения</a>";
-	$_SESSION["lch"] = "<a href='regform.php' id='ar1'>Личный кабинет</a>";
+	$_SESSION["lch"] = "<a href='lchkabinet.php' id='ar1'>Личный кабинет</a>";
 	$_SESSION["vihod"] = "<a href='vihod.php' id='ar1'>Выход</a>";
 	
 	header('Location: /glavnaya.php');
