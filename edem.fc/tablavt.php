@@ -51,7 +51,6 @@ if ($_SESSION["igr"] == true) {
 			<?php
 			$foto = $_SESSION["foto"];
 			echo "<img src='$foto'>";
-			echo $_SESSION["surname"] . ' ';
 			echo $_SESSION["name"];
 			echo "<br>";
 			echo $_SESSION["lch"];
@@ -66,7 +65,7 @@ if ($_SESSION["pol"] == true) { ?>
 	<div id="avt3">
 		
 			<?php
-			echo $_SESSION["name_pol"];
+			echo $_SESSION["name"];
 		?>
 		<br>
 		<a href="vihod.php" id="ar1">Выход</a>

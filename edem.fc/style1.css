@@ -127,6 +127,8 @@ height: 5%;
 line-height: 80%;
 font-family: Times new roman;
 font-size: 200%;
+border-bottom-left-radius: 10px;
+border-top-left-radius: 10px;
 }
 #ul1 {
 	padding-top: 30%;
@@ -140,7 +142,7 @@ text-decoration: none;
 }
 #ar1{
 	color: #2a3242;
-	margin-top: %;
+	
 	text-decoration: none;
 }
 #ar1:hover{
@@ -223,6 +225,7 @@ border-left: 0px;
 	margin-top: -45%;
 	background-color:#f5f7f7;
 	display: table;
+	border-radius: 7px;
 }
 
 #spg1 {
@@ -370,4 +373,46 @@ border-left: 0px;
 #photoavt {
 	width: 15%;
 	height: 18%;
+}
+#addcomm{
+	border:2px ridge #bae8ff;
+	border-radius: 10px;
+	background-color: #e3e5e6;
+}
+#addcommotpr{
+	border:1px solid #e3e1e1;
+	border-radius: 10px;
+	background-color: #f1f1f1;
+	margin-left: 50%;
+}
+#ostcomm{
+	border:2px ridge #bae8ff;
+	border-radius: 10px;
+	background-color: #f1f1f1;
+	width: 60%;
+	font-size:100%;
+}
+#polzovatelcomm{
+	margin-top: 0%;
+	margin-left: 5%;
+	font-family: monospace;
+	font-style: oblique;
+	font-weight: 300;
+	font-size: 170%;
+	
+}
+#textpolcomm{
+	margin-top: -3%;
+	font-size:90%;
+	font-family: monospace;
+	font-weight: normal;
+	font-style: oblique;
+	margin-left: 2%;
+}
+#date {
+	font-size: 60%;
+	margin-top: -3%;
+	margin-left: 75%;
+	font-weight: 100;
+	color: #a8aaad;
 }

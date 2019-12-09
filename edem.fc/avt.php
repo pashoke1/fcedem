@@ -12,7 +12,7 @@ if(($row['username'] == $username) &&
 	session_start();
 	$_SESSION["username"] = $username;
 	$_SESSION["pol"] = true;
-	$_SESSION["name_pol"] = $row["name_pol"];
+	$_SESSION["name"] = $row["name_pol"];
 	
 	header('Location: /glavnaya.php');
 
