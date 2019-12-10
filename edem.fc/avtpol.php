@@ -1,7 +1,5 @@
 <?php
-$conn = mysqli_connect("127.0.0.1", "root", "", "edemfc");
-if(!$conn)
-	{die("conn err, ". mysqli_connect_error());}
+require('bd.php');
 $username = $_POST['username'];
 $password = $_POST['password'];
 $query = "SELECT * FROM `users` where `username` = '$username' and `password` = '$password'";

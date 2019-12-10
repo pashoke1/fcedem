@@ -1,5 +1,6 @@
 <?php session_start(); 
 if (isset($_SESSION['igr'])){
+	
 
 ?>
 <html>
@@ -26,15 +27,16 @@ require("tablavt.php");
 </ul>
 </div>
 <div id="cont1">
-	<a href="editlch.php" id="redlch" 
-	>Редактировать</a>
+	<a href="lchkabinet.php" id="redlch" 
+	>Отменить редактирование</a>
 <?php
 $id = $_SESSION['id'];
 require('bd.php');
 $query = "SELECT * FROM `igroki` where `id` = '$id'";
 $result = mysqli_query($conn, $query);
 $row = mysqli_fetch_assoc($result);
-            $id = $row['id'];
+$id = $row['id'];
+
             $fi = $row['f.i.'];
 			$koligr = $row['koligr'];
 			$amp = $row['amplua'];
@@ -48,27 +50,37 @@ $row = mysqli_fetch_assoc($result);
 			$biog = $row['biog'];
 	echo "<img src='$foto' id='fotolch'>";
 	?>
+	<form method="post" action="editlchotpr.php">
 	<div style="margin-left: 50%; margin-top: -17%;">
-	<p id="infalch">Имя: <?php echo $fi;?></p>
-	<p id="infalch">Возраст: <?php echo $age;?></p>
-	<p id="infalch">Дата Рождения:  <?php echo $dr;?></p>
+		<?php
+	echo "<p id='infalch'>Имя: <input type='text' name='imya' value='$fi'></p>";
+	echo "<p id='infalch'>Возраст: <input type='text' name='age' value='$age'></p>";
+	echo "<p id='infalch'>Дата Рождения: <input type='text' name='dr' value='$dr'></p>";
+	?>
 	<p id="infalch">Клуб:<img src="emblema3.png" style="height: 24px; top: 2px; position: relative;margin:0px 2px;">Эдем</p>
 </div>
 
-	<div id="bioglch" >Биография
+<?php
 
-	<p id="bioglch1"><?php echo $biog; ?></p>
+?>
+	<div id="bioglch">Биография
+
+	<textarea id="bioglch1" rows="10" name="biog"><?php echo $biog; ?></textarea>
 
 	</div>
 	<table id="tbls">
 		<tr id="strtb"><td>Ф.И.О</td><td style="border-left:1px solid black;">Игры</td><td id="strtb">Голы</td><td id="krk"><img src="igroki/kk.png"></td><td id="zhk"><img src="igroki/zhk.png"></td></tr>
 		<?php
-
+		
 		
     
 		echo "<tr id='strtbr'><td id='strtbn1'><img src='$foto' id='igrph' style='height:47px;''>$fi<br><span id='poz'>$amp</span></td><td id='strtb'>$koligr</td><td id='strtb'>$gols</td><td id='krk'>$kk</td><td id='zhk'>$zhk</td></tr>";
+		
 		?>
 	</table>
+	
+		<input type="hidden" name="id" value=<?php echo "$id"; ?>>
+		<input type="submit" name="Сохранить" value="Сохранить" style="margin-top: 3%; margin-left: 80%; height: 40px; width: 150px; font-size: 150%;"></form>
 </div>
 </body>
 </html>

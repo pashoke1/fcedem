@@ -2,9 +2,7 @@
 session_start(); 
 if(isset($_SESSION['username']))
 {
-	$conn = mysqli_connect("127.0.0.1", "root", "", "edemfc");
-	if(!$conn)
-		die("conn err, ".mysqli_connect_error());
+	require('bd.php');
 	$nomermatcha = $_POST["№matcha"];
 	$shet = $_POST["schetvvod"];
 	$sopernik = $_POST["sopernik"];

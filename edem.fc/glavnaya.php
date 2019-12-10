@@ -9,7 +9,7 @@
 </head>
 <body id="bodygl">
 	<a href="glavnaya.php"><button id="b1"></button></a>
-<div id="d1">Футбольный клуб "Эдем"</div>
+<div id="d1"><?php require('slayder.html');?></div>
 <?php
 require("tablavt.php");
 ?>

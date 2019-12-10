@@ -10,11 +10,7 @@ if ($_SESSION['admin'] == true) {
 </head>
 <body>
 <?php
-$conn = mysqli_connect("127.0.0.1","root","","edemfc");
-if(!$conn)
-{
-  die("conn error ". mysqli_connect_error());
-} else{
+require('bd.php');
 
 $query = "SELECT * FROM `prin`";
 
@@ -39,7 +35,7 @@ while ($row = $result_set->fetch_assoc()) {
   <input type="submit" name="">
 </form>
 <?php
-     }
+     
 
         if ($_POST['da'] != null) {
            $idv = $_POST['da'];

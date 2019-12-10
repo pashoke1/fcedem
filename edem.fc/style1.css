@@ -1,17 +1,17 @@
 #d1 {
 	border:0px;
-	background-color: #bdfffe;
+	background-color: #445b9e;
 	width: 60%;
 	height: 20%;
 	display: inline-block;
 	text-align: center;
 	margin-left:20%;
 	margin-top: -10%;
-	font-size: 45px;
+	font-size: 300%;
 line-height: 300%;
-border: 2px outset #bdfffe;
+border: 2px ridge #8292bf;
 border-left: 0px;
-
+border-right: 0px;
 }
 #d2 {
 	border-right: 2px outset #bdfffe;
@@ -21,74 +21,82 @@ border-left: 0px;
 	display: inline-block;
 	text-align: center;
 	margin:0%;
-	margin-top:-18px;
+	margin-top:-5%;
 	display: inline-block;
 	}
 #bodygl {
-	background-color: #1790d1;
+	background-color:#a5b9e8;
 	margin:0px;
 }
 #avt1 {
-	border:3px outset #e6f4f5;
-	width: 274px;
+	border:3px ridge #8292bf;
+	width: 19.5%;
 	height: 20%;
 	text-align:center;
 	margin-left: 80%;
-	margin-top: -144px;
+	margin-top: -10.3%;
 	margin-bottom: 0%;
-    line-height: 190%;
-	font-size: 20px;
+    line-height: 200%;
+	font-size: 140%;
 	font-family: monospace;
-	background-color: #e6f4f5;
+	background-color:#e6ecf0;
+	border-bottom-right-radius: 10px;
+	border-top-right-radius: 10px;
 	
 }
 #avt2 {
-	border:3px outset #e6f4f5;
-	width: 274px;
+	border:3px ridge #8292bf;
+	width: 19.5%;
 	height: 20%;
 	text-align:center;
 	margin-left: 80%;
-	margin-top: -144px;
+	margin-top: -10.3%;
 	margin-bottom: 0%;
     line-height: 200%;
-	font-size: 20px;
+	font-size: 140%;
 	font-family: monospace;
-	background-color: #e6f4f5;
+	background-color:#e6ecf0;
+	border-bottom-right-radius: 10px;
+	border-top-right-radius: 10px;
 	
 }
 #avt3 {
-	border:3px outset #e6f4f5;
-	width: 274px;
+	border:3px ridge #8292bf;
+	width: 19.5%;
 	height: 20%;
 	text-align:center;
 	margin-left: 80%;
-	margin-top: -144px;
+	margin-top: -10.3%;
 	margin-bottom: 0%;
-    line-height: 250%;
-	font-size: 200%;
+    line-height: 200%;
+	font-size: 140%;
 	font-family: monospace;
-	background-color: #e6f4f5;
+	background-color:#e6ecf0;
+	border-bottom-right-radius: 10px;
+	border-top-right-radius: 10px;
 	
 }
 #avtad {
-	border:3px outset #e6f4f5;
-	width: 274px;
+	border:3px ridge #8292bf;
+	width: 19.5%;
 	height: 20%;
 	text-align:center;
 	margin-left: 80%;
-	margin-top: -144px;
+	margin-top: -10.3%;
 	margin-bottom: 0%;
-    line-height: 190%;
-	font-size: 130%;
+    line-height: 200%;
+	font-size: 140%;
 	font-family: monospace;
-	background-color: #e6f4f5;
+	background-color:#e6ecf0;
+	border-bottom-right-radius: 10px;
+	border-top-right-radius: 10px;
 	
 }
 #b1 {
 	border:0px;
 	margin:0%;
-	background: url("emblema2.jpg") 50% no-repeat / contain;
-    background-color: #bdfffe;
+	background: url("emblema3.png") 50% no-repeat / contain;
+    background-color: #445b9e;
 	width: 20%;
 	height:20%;
 	text-align: center;
@@ -108,12 +116,13 @@ border-left: 0px;
 
 }
 #sp1 {
-	background-color:  #bdfffe;
+	background-color:  #445b9e;
 	height: 100%;
 	width: 20%;
 	margin-top: -3%;
-	border-right: 3px outset #bdfffe;
-	border-bottom: 3px outset #bdfffe;
+	border-right: 3px ridge #8292bf;
+	border-bottom: 3px ridge #8292bf;
+	border-bottom-right-radius: 10px;
 	text-align: right;
 
 }
@@ -138,11 +147,12 @@ border-top-left-radius: 10px;
 text-decoration: none;
 }
 #st1:hover {
-	background-color: #4a70bd;
+	background-color: #3d60a8;
+	transition: 0.2s;
 }
 #ar1{
 	color: #2a3242;
-	
+	transition: 0.4s;
 	text-decoration: none;
 }
 #ar1:hover{
@@ -258,7 +268,7 @@ border-left: 0px;
     border:3px ridge black;
     background-color: #daded7;
     font-size: 150%;
-    margin-left: 24%;
+    margin-left: 20%;
     width: 60%;
 }
 #strtb {
@@ -383,7 +393,7 @@ border-left: 0px;
 	border:1px solid #e3e1e1;
 	border-radius: 10px;
 	background-color: #f1f1f1;
-	margin-left: 50%;
+	margin-left: 46.5%;
 }
 #ostcomm{
 	border:2px ridge #bae8ff;
@@ -415,4 +425,68 @@ border-left: 0px;
 	margin-left: 75%;
 	font-weight: 100;
 	color: #a8aaad;
+}
+#stramplua {
+	text-align: center;
+	border: 3px solid black;	
+}
+#sor{
+	text-align: center;
+	display: inline-block;
+	margin-left: 20%;
+    font-size: 150%;
+    
+}
+
+#psor{
+	text-align: center;
+	border:1px ridge black;
+	display: inline-block;
+
+}
+#fotolch{
+	height:220px;
+	margin-left: 10%;
+	margin-top: 0%;
+}
+#infalch{
+	font-weight: 400;
+margin: 0 0 5px 0;
+    padding-bottom: 5px;
+font-size: 150%;
+}
+#bioglch{
+	font-weight: 800;
+	font-size: 200%;
+	margin-top: 20%;
+	margin-left: 5%;
+
+
+}
+#bioglch1{
+	font-weight: 100;
+    border:5px ridge #f0f0f0;
+	border-radius: 10px;
+	background-color: #f1f1f1;
+	width: 103%;
+	margin-left: -5%;
+	margin-top: -0.1%;
+	font-size:70%;
+	font-family: monospace;
+	font-weight: normal;
+	font-style: oblique;
+}
+	
+#redlch{
+	list-style: none;
+	margin-left: 75%; 
+	color: grey;
+	text-decoration: none;
+	font-weight: 500;
+	font-size: 120%;
+}
+#redlch:hover {
+	color:#02121c;
+	transition: 0.15s;
+
 }

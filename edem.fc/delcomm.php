@@ -3,9 +3,7 @@ session_start();
 
 if($_SESSION["admin"])
 {
-	$conn = mysqli_connect("127.0.0.1", "root", "", "edemfc");
-	if(!$conn)
-		die("conn err, ".mysqli_connect_error());
+require('bd.php');
 	
 
 	$id = $_POST["id"];

@@ -21,6 +21,7 @@ if (($rowi['username'] == $username) &&
 		($rowi['password'] == $password)) {
 	$igr = true;
 	session_start();
+	$_SESSION["id"] = $rowi['id'];
 	$_SESSION["foto"] = $rowfoto['img'];
 	$_SESSION["username"] = $username;
 	$_SESSION["password"] = $password;

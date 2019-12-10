@@ -1,7 +1,5 @@
 <?php session_start(); 
-$conn = mysqli_connect("localhost", "root", "", "edemfc");
-    if(!$conn)
-      die("conn err, ". mysqli_connect_error());
+require('bd.php');
 
     $query = "SELECT * FROM `igry`";
     $result = mysqli_query($conn, $query);
@@ -61,9 +59,7 @@ while ($row = mysqli_fetch_assoc($result)) {
 <div id="d1">Футбольный клуб "Эдем"</div>
 <?php 
 require("tablavt.php");
-$conn = mysqli_connect("localhost", "root", "", "edemfc");
-    if(!$conn)
-      die("conn err, ". mysqli_connect_error());
+require('bd.php');
 
     $query = "SELECT * FROM `igry`";
     $result = mysqli_query($conn, $query);

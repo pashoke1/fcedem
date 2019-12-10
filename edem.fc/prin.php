@@ -5,11 +5,7 @@
 </head>
 <body>
 <?php
-$conn = mysqli_connect("127.0.0.1","root","","edemfc");
-if(!$conn)
-{
-	die("conn error ". mysqli_connect_error());
-} else{
+require('bd.php');
 mysqli_query($conn, "SELECT * FROM `igroki`");
 $query = "SELECT * FROM `igroki`";
 $result = mysqli_query($conn, $query);
@@ -68,5 +64,5 @@ else
 }
 mysqli_close($conn);
 die(mysqli_connect_error());
-}
+
 ?>
