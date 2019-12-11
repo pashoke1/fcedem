@@ -490,3 +490,28 @@ font-size: 150%;
 	transition: 0.15s;
 
 }
+#ikonkaigr{
+
+}
+#aikonka{
+	display: inline-block;
+	width: 19%;
+	height: 35%;
+	
+	text-align: center;
+	
+	font-size:90%;
+	font-weight: 500;
+	margin-top: 5%;
+	margin-left: 5%;
+}
+#lchb{
+	width: 100%; 
+	border: 3px ridge #c2d4f0;
+	border-radius: 10px;
+	line-height: 30%;
+}
+#lchb:hover{
+    background-color: #c3c5c7;
+    transition: 0.3s;
+}
