@@ -191,7 +191,7 @@ text-decoration: none;
 }
 #drf1 {
 
-	background-color: #bdfffe;
+	background-color: #445b9e;
 	width: 80%;
 	height: 20%;
 	display: inline-block;
@@ -200,32 +200,35 @@ text-decoration: none;
 	margin-top: -10%;
 	font-size: 45px;
 line-height: 300%;
-border: 2px outset #bdfffe;
+border: 2px ridge #8292bf;
 border-left: 0px;
+border-right: 0px;
 
 }
 #divr2 {
-	background-color: #bdfffe;
+	background-color: #445b9e;
 	width: 20%;
 	height: 100%;
 	display: inline-block;
 	text-align: center;
-	margin-left:80%;
-	margin-top: -655px;
+	margin-left:79.8%;
+	margin-top: -47.7%;
 	font-size: 45px;
-	border: 3px outset #bdfffe;
-	border-left: 3px inset #bdfffe;
+	border: 0px ridge #8292bf;
+	border-left: 3px ridge #8292bf;
+	border-bottom: 3px ridge #8292bf;
+position: relative;
 
 }
 #divr3 {
-	background-color: #bdfffe;
+	background-color: #445b9e;
 	margin-top: -3%;
 	width: 20%;
 	height: 38px;
 	display: inline-block;
 	text-align: center;
-	border-right: 3px outset #bdfffe;
-	border-bottom: 3px outset #bdfffe;
+	border-right: 3px ridge #8292bf;
+	border-bottom: 3px ridge #8292bf;
 }
 #cont1 {
 	min-width: 70%;
@@ -302,6 +305,7 @@ border-left: 0px;
 }
 #igrph {
 	float: left;
+	height: 48px;
 }
 #strtbr {
 	border:2px solid black;
@@ -343,7 +347,7 @@ border-left: 0px;
     border-top: none;
 }
 #me1 {
-	margin-top: 10%;
+	margin-top: 9.8%;
 	margin-left: 15%;
 }
 #sch1 {
@@ -352,10 +356,10 @@ border-left: 0px;
 	margin-left: 40%;
 }
 #kv1 {
-	margin-top: -15%;
+	margin-top: -13%;
 	margin-left: 60%;
-	width: 200px;
-	height: 200px;
+	
+	height:190.5%;
 }
 #goli {
    margin-left: 20%;
@@ -403,16 +407,21 @@ border-left: 0px;
 	font-size:100%;
 }
 #polzovatelcomm{
-	margin-top: 0%;
-	margin-left: 5%;
+	margin-top: 0px;
+	margin-left: 0%;
+	margin-bottom: 0px;
 	font-family: monospace;
 	font-style: oblique;
 	font-weight: 300;
 	font-size: 170%;
-	
+display: inline-block;
+position: relative;
+top: -20px;
+width: 90%;
+
 }
 #textpolcomm{
-	margin-top: -3%;
+	margin-top: -5%;
 	font-size:90%;
 	font-family: monospace;
 	font-weight: normal;
@@ -514,4 +523,17 @@ font-size: 150%;
 #lchb:hover{
     background-color: #c3c5c7;
     transition: 0.3s;
+}
+#dobavatar{
+	height: 60%;
+	width: 25%; 
+	float: left;
+	display: inline-block;
+	border:2px ;
+	border-radius: 10px;
+	background-color: #e6ecf0;
+}
+#fotopol{
+	height: 100%;
+	width: 100%;
 }

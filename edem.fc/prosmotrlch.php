@@ -19,7 +19,7 @@ require("tablavt.php");
 	<a href="2p.php" id="ast1"><li id="st1">Статистика</li></a>
 	<a href="3p.php" id="ast1"><li id="st1">Таблица</li></a>
 	<a href="4p.php" id="ast1"><li id="st1">Игроки</li></a>
-	<a href="5p.php" id="ast1"><li id="st1">Галерея</li></a>
+	
 	<a href="6p.php" id="ast1"><li id="st1">Контакты</li></a>
 </ul>
 </div>
@@ -31,6 +31,8 @@ $query = "SELECT * FROM `igroki` where `id` = '$id'";
 $result = mysqli_query($conn, $query);
 $row = mysqli_fetch_assoc($result);
             $id = $row['id'];
+            $query1 = "SELECT `foto` FROM `igroki` where `id` = '$id'";
+$result1 = mysqli_query($conn, $query1);
             $fi = $row['f.i.'];
 			$koligr = $row['koligr'];
 			$amp = $row['amplua'];
@@ -42,7 +44,8 @@ $row = mysqli_fetch_assoc($result);
 			$dr = $row['dr'];
 			$age = $row['age'];
 			$biog = $row['biog'];
-	echo "<img src='$foto' id='fotolch'>";
+			$image = mysqli_fetch_array($result1)['foto'];
+	echo "<img src='data:image/png;base64," . base64_encode($image) . "'  id = 'fotolch'/>";
 	?>
 	<div style="margin-left: 50%; margin-top: -17%;">
 	<p id="infalch">Имя: <?php echo $fi;?></p>
@@ -62,7 +65,8 @@ $row = mysqli_fetch_assoc($result);
 
 		
     
-		echo "<tr id='strtbr'><td id='strtbn1'><img src='$foto' id='igrph' style='height:47px;''>$fi<br><span id='poz'>$amp</span></td><td id='strtb'>$koligr</td><td id='strtb'>$gols</td><td id='krk'>$kk</td><td id='zhk'>$zhk</td></tr>";
+		echo "<tr id='strtbr'><td id='strtbn1'>
+			 <img src='data:image/png;base64," . base64_encode($image) . "'  id = 'igrph'/>$fi<br><span id='poz'>$amp</span></td><td id='strtb'>$koligr</td><td id='strtb'>$gols</td><td id='krk'>$kk</td><td id='zhk'>$zhk</td></tr>";
 		?>
 	</table>
 </div>

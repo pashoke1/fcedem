@@ -18,7 +18,7 @@ require("tablavt.php");
 	<a href="2p.php" id="ast1"><li id="st1">Статистика</li></a>
 	<a href="3p.php" id="ast1"><li id="st1">Таблица</li></a>
 	<a href="4p.php" id="ast1"><li id="st1">Игроки</li></a>
-	<a href="5p.php" id="ast1"><li id="st1">Галерея</li></a>
+	
 	<a href="6p.php" id="ast1"><li id="st1">Контакты</li></a>
 </ul>
 </div>
@@ -31,16 +31,18 @@ $result = mysqli_query($conn, $query);
           
 			while ($row = mysqli_fetch_assoc($result)) {
 				  $id = $row['id'];
+				  $query1 = "SELECT `foto` FROM `igroki` where `id` = '$id'";
+$result1 = mysqli_query($conn, $query1);
             $fi = $row['f.i.'];
 			$amp = $row['amplua'];
 			$foto = $row['foto'];
 			$dr = $row['dr'];
 			$age = $row['age'];
-			
+			$image = mysqli_fetch_array($result1)['foto'];
 	echo "<form action='prosmotrlch.php' method='post' id='aikonka'>
 	<input type='hidden' name='id' value='$id'>
 	<button id='lchb'>
-	<img src='$foto' style= 'height: 200px; border: 1px ridge #dee0e3;border-radius: 10px; position: relative;top: 15px; margin-bottom: 10px;'>";
+	<img src='data:image/png;base64," . base64_encode($image) . "' style= 'height: 200px; border: 1px ridge #dee0e3;border-radius: 10px; position: relative;top: 15px; margin-bottom: 10px;'/>";
 	?>
 	<div style="text-align: left; margin-left: 15px;">
 	<p>Позиция:<?php echo $amp;?></p>

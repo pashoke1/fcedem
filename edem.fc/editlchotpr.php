@@ -7,6 +7,7 @@ $imay = $_POST['imya'];
 $age = $_POST['age'];
 $dr = $_POST['dr'];
 $biog = $_POST['biog'];
+$image = addslashes(file_get_contents($_FILES['foto']['tmp_name']));
 $query = "UPDATE `igroki` SET `f.i.` = '$imay' WHERE `igroki`.`id` = '$id' ";
 		mysqli_query($conn, $query);
 		$query1 = "UPDATE `igroki` SET `age` = '$age' WHERE `igroki`.`id` = '$id' ";
@@ -15,6 +16,8 @@ $query = "UPDATE `igroki` SET `f.i.` = '$imay' WHERE `igroki`.`id` = '$id' ";
 		mysqli_query($conn, $query2);
 		$query3 = "UPDATE `igroki` SET `biog` = '$biog' WHERE `igroki`.`id` = '$id' ";
 		mysqli_query($conn, $query3);
+		$query4 = "UPDATE `igroki` SET `foto` = '$image' WHERE `igroki`.`id` = '$id' ";
+		mysqli_query($conn, $query4);
 				mysqli_close($conn);
 	header("Location: /lchkabinet.php");
 }

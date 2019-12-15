@@ -10,10 +10,12 @@ if(($row['username'] == $username) &&
 		($row['password'] == $password)){
 		$info_is_valid = true;	
 	session_start();
+	$_SESSION['id'] = $idpol;
 	$_SESSION["username"] = $username;
 	$_SESSION["pol"] = true;
 	$_SESSION["name"] = $row["name_pol"];
-	
+	$_SESSION['foto'] = $foto1;
+	$_SESSION['foto1'] = $foto2;
 	header('Location: /glavnaya.php');
 
 } else {echo "";}
@@ -27,6 +29,8 @@ if (($rowi['username'] == $username) &&
 	$_SESSION["password"] = $password;
 	$_SESSION["name"] = $rowi['f.i.'];
 	$_SESSION["igr"] = true;
+	$_SESSION['foto'] = $fotoi;
+	$_SESSION['foto1'] = $fotoi1;
 	$_SESSION["lch"] = "<a href='lchkabinet.php' id='ar1'>Личный кабинет</a>";
 	$_SESSION["vihod"] = "<a href='vihod.php' id='ar1'>Выход</a>";
 	header('Location: /glavnaya.php');

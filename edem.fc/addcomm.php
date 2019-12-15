@@ -14,8 +14,8 @@ if(isset($_SESSION['username']))
 		mysqli_query($conn, $query);
 	}
 	mysqli_close($conn);
-	$page = $_SERVER['HTTP_REFERER'];
-	header("Location:$page");
+	//$page = $_SERVER['HTTP_REFERER'];
+	header("Location: 1p.php");
 }
 else
 {

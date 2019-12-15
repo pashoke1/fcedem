@@ -70,7 +70,6 @@ require('bd.php');
   <a href="2p.php" id="ast1"><li id="st1">Статистика</li></a>
   <a href="3p.php" id="ast1"><li id="st1">Таблица</li></a>
   <a href="4p.php" id="ast1"><li id="st1">Игроки</li></a>
-  <a href="5p.php" id="ast1"><li id="st1">Галерея</li></a>
   <a href="6p.php" id="ast1"><li id="st1">Контакты</li></a>
 </ul>
 </div>
@@ -96,7 +95,7 @@ while($row2 = mysqli_fetch_assoc($result2))
   {
     $idmatcha = $row2['nomermatcha'];
     $schet = $row2['schet'];
-    $fotka = $row2['fotosop'];
+   $image = mysqli_fetch_array($result)['fotosop'];
     $goly = $row2['goly'];
       $id = $row2['id_match'];
       $fotoob = $row2['fotoobzor'];
@@ -105,7 +104,7 @@ while($row2 = mysqli_fetch_assoc($result2))
   echo "<h3>$idmatcha</h3>";
   echo "<img src='emblema3.png' id='me1'>";
   echo "<div id='sch1'>$schet</div>";
-  echo "<img src='$fotka' id='kv1'>";
+ echo '<img src="data:image/png;base64,' . base64_encode($image) . '"  id = "kv1"/>';
   echo "<br> <br>";
 
   echo "<div id='goli'>Голы:$goly</div>";
@@ -130,7 +129,7 @@ echo "</div>";
 
 ?>
 <div id='addmatch1'>
-  <form method="post" action="addmatch.php">
+  <form method="post" action="addmatch.php" enctype="multipart/form-data">
   <p>Номер матча:<input type="text" name="№matcha" placeholder="Пример: Матч№2"></p>
   
   <P><input type="text" name="schetvvod" placeholder="Счет"></P>

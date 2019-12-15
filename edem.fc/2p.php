@@ -18,7 +18,7 @@ require("tablavt.php");
 	<a href="2p.php" id="ast1"><li id="st1">Статистика</li></a>
 	<a href="3p.php" id="ast1"><li id="st1">Таблица</li></a>
 	<a href="4p.php" id="ast1"><li id="st1">Игроки</li></a>
-	<a href="5p.php" id="ast1"><li id="st1">Галерея</li></a>
+	
 	<a href="6p.php" id="ast1"><li id="st1">Контакты</li></a>
 
 </ul>
@@ -40,6 +40,14 @@ require("tablavt.php");
 		<tr id="stramplua"><td colspan="6">Вратари</td></tr>
 		<?php 
 		require('bd.php');
+		$queryf1 = "SELECT `foto` FROM `igroki` where `amplua` = 'вратарь' ";
+    $resultf1 = mysqli_query($conn, $queryf1);
+    $queryf2 = "SELECT `foto` FROM `igroki` where `amplua` = 'защитник' ";
+    $resultf2 = mysqli_query($conn, $queryf2);
+    $queryf3 = "SELECT `foto` FROM `igroki` where `amplua` = 'полузащитник'";
+    $resultf3 = mysqli_query($conn, $queryf3);
+    $queryf4 = "SELECT `foto` FROM `igroki` where `amplua` = 'нападающий'";
+    $resultf4 = mysqli_query($conn, $queryf4);
 		$query = "SELECT * FROM `igroki` where `amplua` = 'вратарь' ORDER BY `igroki`.`goals` DESC";
     $result = mysqli_query($conn, $query);
     $query1 = "SELECT * FROM `igroki`  where `amplua` = 'защитник' ORDER BY `igroki`.`goals` DESC";
@@ -100,6 +108,9 @@ if ($_POST['sor'] == "zhk") {
 }
 
 		while ($row = mysqli_fetch_assoc($result)) {
+			$id = $row['id'];
+			$queryf1 = "SELECT `foto` FROM `igroki` where `amplua` = 'вратарь' and `id` = '$id'";
+    $resultf1 = mysqli_query($conn, $queryf1);
 			$fi = $row['f.i.'];
 			$koligr = $row['koligr'];
 			$amp = $row['amplua'];
@@ -107,13 +118,17 @@ if ($_POST['sor'] == "zhk") {
 			$golpas = $row['golpas'];
 			$zhk = $row['zhk'];
 			$kk = $row['kk'];
-			$foto = $row['foto'];
-			echo "<tr id='strtbr'><td id='strtbn1'><img src='$foto' id='igrph'>$fi<br><span id='poz'>$amp</span></td><td id='strtb'>$koligr</td><td id='strtb'>$gols</td><td id='krk'>$kk</td><td id='zhk'>$zhk</td></tr>";
+			$image = mysqli_fetch_array($resultf1)['foto'];
+			echo "<tr id='strtbr'><td id='strtbn1'>
+			 <img src='data:image/png;base64," . base64_encode($image) . "'  id = 'igrph'/>$fi<br><span id='poz'>$amp</span></td><td id='strtb'>$koligr</td><td id='strtb'>$gols</td><td id='krk'>$kk</td><td id='zhk'>$zhk</td></tr>";
 		}
 		?>
 		<tr id="stramplua"><td colspan="6">Защитники</td></tr>
 		<?php
 		while ($row = mysqli_fetch_assoc($result1)) {
+			$id = $row['id'];
+			$queryf2 = "SELECT `foto` FROM `igroki` where `amplua` = 'защитник' and `id` = '$id'";
+    $resultf2 = mysqli_query($conn, $queryf2);
 			$fi = $row['f.i.'];
 			$koligr = $row['koligr'];
 			$amp = $row['amplua'];
@@ -121,14 +136,18 @@ if ($_POST['sor'] == "zhk") {
 			$golpas = $row['golpas'];
 			$zhk = $row['zhk'];
 			$kk = $row['kk'];
-			$foto = $row['foto'];
-			echo "<tr id='strtbr'><td id='strtbn1'><img src='$foto' id='igrph' style='height:47px;''>$fi<br><span id='poz'>$amp</span></td><td id='strtb'>$koligr</td><td id='strtb'>$gols</td><td id='krk'>$kk</td><td id='zhk'>$zhk</td></tr>";
+			$image = mysqli_fetch_array($resultf2)['foto'];
+			echo "<tr id='strtbr'><td id='strtbn1'>
+			 <img src='data:image/png;base64," . base64_encode($image) . "'  id = 'igrph'/>$fi<br><span id='poz'>$amp</span></td><td id='strtb'>$koligr</td><td id='strtb'>$gols</td><td id='krk'>$kk</td><td id='zhk'>$zhk</td></tr>";
 		}
 
 		?>
 		<tr id="stramplua"><td colspan="6">Полузащитники</td></tr>
 		<?php
 		while ($row = mysqli_fetch_assoc($result2)) {
+			$id = $row['id'];
+			$queryf3 = "SELECT `foto` FROM `igroki` where `amplua` = 'полузащитник' and `id` = '$id'";
+    $resultf3 = mysqli_query($conn, $queryf3);
 			$fi = $row['f.i.'];
 			$koligr = $row['koligr'];
 			$amp = $row['amplua'];
@@ -137,13 +156,18 @@ if ($_POST['sor'] == "zhk") {
 			$zhk = $row['zhk'];
 			$kk = $row['kk'];
 			$foto = $row['foto'];
-			echo "<tr id='strtbr'><td id='strtbn1'><img src='$foto' id='igrph'>$fi<br><span id='poz'>$amp</span></td><td id='strtb'>$koligr</td><td id='strtb'>$gols</td><td id='krk'>$kk</td><td id='zhk'>$zhk</td></tr>";
+			$image = mysqli_fetch_array($resultf3)['foto'];
+			echo "<tr id='strtbr'><td id='strtbn1'>
+			 <img src='data:image/png;base64," . base64_encode($image) . "'  id = 'igrph'/>$fi<br><span id='poz'>$amp</span></td><td id='strtb'>$koligr</td><td id='strtb'>$gols</td><td id='krk'>$kk</td><td id='zhk'>$zhk</td></tr>";
 		}
 
 		?>
 		<tr id="stramplua"><td colspan="6">Нападающие</td></tr>
 		<?php
 		while ($row = mysqli_fetch_assoc($result3)) {
+			$id = $row['id'];
+			$queryf4 = "SELECT `foto` FROM `igroki` where `amplua` = 'нападающий' and `id` = '$id'";
+    $resultf4 = mysqli_query($conn, $queryf4);
 			$fi = $row['f.i.'];
 			$koligr = $row['koligr'];
 			$amp = $row['amplua'];
@@ -151,8 +175,9 @@ if ($_POST['sor'] == "zhk") {
 			$golpas = $row['golpas'];
 			$zhk = $row['zhk'];
 			$kk = $row['kk'];
-			$foto = $row['foto'];
-			echo "<tr id='strtbr'><td id='strtbn1'><img src='$foto' id='igrph'>$fi<br><span id='poz'>$amp</span></td><td id='strtb'>$koligr</td><td id='strtb'>$gols</td><td id='krk'>$kk</td><td id='zhk'>$zhk</td></tr>";
+			$image = mysqli_fetch_array($resultf4)['foto'];
+			echo "<tr id='strtbr'><td id='strtbn1'>
+			 <img src='data:image/png;base64," . base64_encode($image) . "'  id = 'igrph'/>$fi<br><span id='poz'>$amp</span></td><td id='strtb'>$koligr</td><td id='strtb'>$gols</td><td id='krk'>$kk</td><td id='zhk'>$zhk</td></tr>";
 		}
 
 		?>

@@ -19,7 +19,7 @@ require("tablavt.php");
 	<a href="2p.php" id="ast1"><li id="st1">Статистика</li></a>
 	<a href="3p.php" id="ast1"><li id="st1">Таблица</li></a>
 	<a href="4p.php" id="ast1"><li id="st1">Игроки</li></a>
-	<a href="5p.php" id="ast1"><li id="st1">Галерея</li></a>
+	
 	<a href="6p.php" id="ast1"><li id="st1">Контакты</li></a>
 </ul>
 </div>

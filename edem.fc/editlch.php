@@ -35,8 +35,9 @@ require('bd.php');
 $query = "SELECT * FROM `igroki` where `id` = '$id'";
 $result = mysqli_query($conn, $query);
 $row = mysqli_fetch_assoc($result);
-$id = $row['id'];
-
+            $id = $row['id'];
+            $query1 = "SELECT `foto` FROM `igroki` where `id` = '$id'";
+$result1 = mysqli_query($conn, $query1);
             $fi = $row['f.i.'];
 			$koligr = $row['koligr'];
 			$amp = $row['amplua'];
@@ -48,9 +49,11 @@ $id = $row['id'];
 			$dr = $row['dr'];
 			$age = $row['age'];
 			$biog = $row['biog'];
-	echo "<img src='$foto' id='fotolch'>";
+			$image = mysqli_fetch_array($result1)['foto'];
+	echo "<img src='data:image/png;base64," . base64_encode($image) . "'  id = 'fotolch'/>";
 	?>
-	<form method="post" action="editlchotpr.php">
+	<form method="post" action="editlchotpr.php" enctype="multipart/form-data">
+		<p>Добавить фото:<input type="file" name="foto"></p>
 	<div style="margin-left: 50%; margin-top: -17%;">
 		<?php
 	echo "<p id='infalch'>Имя: <input type='text' name='imya' value='$fi'></p>";
@@ -74,7 +77,8 @@ $id = $row['id'];
 		
 		
     
-		echo "<tr id='strtbr'><td id='strtbn1'><img src='$foto' id='igrph' style='height:47px;''>$fi<br><span id='poz'>$amp</span></td><td id='strtb'>$koligr</td><td id='strtb'>$gols</td><td id='krk'>$kk</td><td id='zhk'>$zhk</td></tr>";
+		echo "<tr id='strtbr'><td id='strtbn1'>
+			 <img src='data:image/png;base64," . base64_encode($image) . "'  id = 'igrph'/>$fi<br><span id='poz'>$amp</span></td><td id='strtb'>$koligr</td><td id='strtb'>$gols</td><td id='krk'>$kk</td><td id='zhk'>$zhk</td></tr>";
 		
 		?>
 	</table>
